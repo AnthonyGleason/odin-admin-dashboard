@@ -17,6 +17,8 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-bottom: 5px;
+    margin-left: 5px;
 }
 .header-buttons{
     display: grid;
@@ -36,8 +38,8 @@
     grid-template-columns: 1fr 4fr;
 }
 .greeting, .user-greeting{
-    justify-content: center;
     align-items: center;
+    justify-self: flex-start;
 }
 .greeting{
     grid-area: 1 / 2;
@@ -59,6 +61,7 @@
 }
 .projects{
     grid-area: 2 / 2 / span 2 / 2;
+    margin-left: 5px;
 }
 .project-container{
     height: 90%;
@@ -102,12 +105,23 @@ input{
     height: 50px;
     width: 500px;
 }
-
-
-/* background colors */
-body{
-    background-color: aliceblue;
+/* shadows */
+.sidebar,
+.header{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+/* padding */
+.projects,
+.announcements,
+.trending{
+    padding: 30px;
+}
+.sidebar,
+.header{
+    padding: 15px;
+}
+/* background colors */
+body,
 .header{
     background-color: white;
 }
@@ -117,5 +131,5 @@ body{
 .projects,
 .announcements,
 .trending{
-    background-color: gainsboro;
+    background-color: rgba(240, 240, 240, 0.877);
 }
