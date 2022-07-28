@@ -5,7 +5,7 @@
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body>
+    <body class="body-grid">
         <div class="header">
             <div class="header-top">
                 <input type="text" placeholder="Search...">
@@ -23,20 +23,22 @@
             </div>
         </div>
         <div class="sidebar">
-            <h1>Dashboard</h1>
-            <ul>
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Messages</li>
-                <li>History</li>
-                <li>Tasks</li>
-                <li>Communities</li>
-            </ul>
-            <ul>
-                <li>Settings</li>
-                <li>Support</li>
-                <li>Privacy</li>
-            </ul>
+            <div class="sidebar-logo">Dashboard</div>
+            <div class="sidebar-menu-container">
+                <ul class="sidebar-menu">
+                    <li><img>Home</li>
+                    <li><img>Profile</li>
+                    <li><img>Messages</li>
+                    <li><img>History</li>
+                    <li><img>Tasks</li>
+                    <li><img>Communities</li>
+                </ul>
+                <ul class="sidebar-menu">
+                    <li><img>Settings</li>
+                    <li><img>Support</li>
+                    <li><img>Privacy</li>
+                </ul>
+            </div>
         </div>
         <div class="projects">
             <h1>Your Projects</h1>
@@ -104,25 +106,27 @@
         </div>
         <div class="trending">
             <h1>Trending</h1>
-            <div class="trending-entry">
-                <img>
-                <div class="trending-user"></div>
-                <div class="trending-project"></div>
-            </div>
-            <div class="trending-entry">
-                <img>
-                <div class="trending-user"></div>
-                <div class="trending-project"></div>
-            </div>
-            <div class="trending-entry">
-                <img>
-                <div class="trending-user"></div>
-                <div class="trending-project"></div>
-            </div>
-            <div class="trending-entry">
-                <img>
-                <div class="trending-user"></div>
-                <div class="trending-project"></div>
+            <div class="trending-container">
+                <div class="trending-entry">
+                    <img>
+                    <div class="trending-user"></div>
+                    <div class="trending-project"></div>
+                </div>
+                <div class="trending-entry">
+                    <img>
+                    <div class="trending-user"></div>
+                    <div class="trending-project"></div>
+                </div>
+                <div class="trending-entry">
+                    <img>
+                    <div class="trending-user"></div>
+                    <div class="trending-project"></div>
+                </div>
+                <div class="trending-entry">
+                    <img>
+                    <div class="trending-user"></div>
+                    <div class="trending-project"></div>
+                </div>
             </div>
         </div>
     </body>
