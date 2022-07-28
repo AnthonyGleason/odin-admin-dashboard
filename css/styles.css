@@ -14,6 +14,48 @@
 }
 .header{
     grid-area: 2 / 2 / 1 / span 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.header-buttons{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.header-buttons button{
+    height: 50px;
+    width: 100px;
+}
+.header-greeting{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 4fr;
+}
+.greeting, .user-greeting{
+    justify-content: center;
+    align-items: center;
+}
+.greeting{
+    grid-area: 1 / 2;
+}
+.user-greeting{
+    grid-area: 2 / 2;
+}
+.header-userpanel{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.header div{
+    display: grid;
+    justify-content: center;
 }
 .projects{
     grid-area: 2 / 2 / span 2 / 2;
@@ -55,4 +97,25 @@
 }
 .trending{
     grid-area: 3 / 3 / 3 / 3;
+}
+input{
+    height: 50px;
+    width: 500px;
+}
+
+
+/* background colors */
+body{
+    background-color: aliceblue;
+}
+.header{
+    background-color: white;
+}
+.sidebar{
+    background-color: rgb(167, 161, 255);
+}
+.projects,
+.announcements,
+.trending{
+    background-color: gainsboro;
 }
