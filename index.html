@@ -4,135 +4,202 @@
         <meta charset="utf-8">
         <title>Admin Dashboard</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     </head>
-    <body class="body-grid">
-        <div class="header">
-            <div class="header-search">
-                <img>
-                <input type="text" placeholder="Search...">
-            </div>
-            <div class="header-userpanel">
-                <img>
-                <img>
-                <div class="header-name">Morgan Oakley</div>
-            </div>
-            <div class="header-greeting">
-                <img>
-                <div class="greeting">Hi there,</div>
-                <div class="user-greeting">Morgan Oakley (@morgan)</div>
-            </div>
-            <div class="header-buttons">
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
-            </div>
-        </div>
-        <div class="sidebar">
-            <div class="sidebar-logo">Dashboard</div>
-            <div class="sidebar-menu-container">
-                <ul class="sidebar-menu">
-                    <li><img>Home</li>
-                    <li><img>Profile</li>
-                    <li><img>Messages</li>
-                    <li><img>History</li>
-                    <li><img>Tasks</li>
-                    <li><img>Communities</li>
-                </ul>
-                <ul class="sidebar-menu">
-                    <li><img>Settings</li>
-                    <li><img>Support</li>
-                    <li><img>Privacy</li>
-                </ul>
-            </div>
-        </div>
-        <div class="projects">
-            <h1>Your Projects</h1>
-            <div class="project-container">
-                <div>
-                    <h1>Project</h1>
-                    <p>Project Description</p>
-                    <img>
-                    <img>
-                    <img>
+    <body>
+        <div class="body-grid-container">
+            <div class="header">
+                <div class="header-top">
+                    <img class="header-top-search-img" src="img/search.svg">
+                    <input class= "header-top-search-bar" type="text">
+                    <img class="header-top-bell-img" src="img/bell.svg">
+                    <img class="header-top-profile-img" src="img/account-hard-hat.svg">
+                    <div class="header-top-profile-name">Morgan Oakley</div>
                 </div>
-                <div>
-                    <h1>Project</h1>
-                    <p>Project Description</p>
-                    <img>
-                    <img>
-                    <img>
-                </div>
-                <div>
-                    <h1>Project</h1>
-                    <p>Project Description</p>
-                    <img>
-                    <img>
-                    <img>
-                </div>
-                <div>
-                    <h1>Project</h1>
-                    <p>Project Description</p>
-                    <img>
-                    <img>
-                    <img>
-                </div>
-                <div>
-                    <h1>Project</h1>
-                    <p>Project Description</p>
-                    <img>
-                    <img>
-                    <img>
-                </div>
-                <div>
-                    <h1>Project</h1>
-                    <p>Project Description</p>
-                    <img>
-                    <img>
-                    <img>
+                <div class="header-bottom">
+                    <img class="header-bottom-img" src="img/account-hard-hat.svg">
+                    <div class="header-bottom-greeting-generic">Hi there,</div>
+                    <div class="header-bottom-greeting-user">Morgan Oakley (@morgan)</div>
+                    <button class="header-bottom-button-new">New</button>
+                    <button class="header-bottom-button-upload">Upload</button>
+                    <button class="header-bottom-button-share">Share</button>
                 </div>
             </div>
-        </div>
-        <div class="announcements">
-            <h1>Announcements</h1>
-            <div class="announcements-container">
-                <div>
-                    <h2>Site Maintenance</h2>
-                    <p>Description here</p>
+            <div class="sidebar-grid-container">
+                <div class="sidebar-header">
+                    <img id="sidebar-header-logo-img" class="sidebar-img" src="img/logo.svg">
+                    <div id="sidebar-header-logo-text" class="sidebar-logo-text">Dashboard</div>
                 </div>
-                <div>
-                    <h2>Community Share Day</h2>
-                    <p>Description here</p>
+                <div class="sidebar-menu-one">
+                    <div class="sidebar-menu-option">
+                        <img class="sidebar-img" src="img/home.svg">
+                        <div class="sidebar-menu-option-text">Home</div>
+                    </div>
+                    <div class="sidebar-menu-option">
+                        <img class="sidebar-img" src="img/profile.svg">
+                        <div class="sidebar-menu-option-text">Profile</div>
+                    </div>
+                    <div class="sidebar-menu-option">
+                        <img class="sidebar-img" src="img/messages.svg">
+                        <div class="sidebar-menu-option-text">Messages</div>
+                    </div>
+                    <div class="sidebar-menu-option">
+                        <img class="sidebar-img" src="img/history.svg">
+                        <div class="sidebar-menu-option-text">History</div>
+                    </div>
+                    <div class="sidebar-menu-option">
+                        <img class="sidebar-img" src="img/tasks.svg">
+                        <div class="sidebar-menu-option-text">Tasks</div>
+                    </div>
+                    <div class="sidebar-menu-option">
+                        <img class="sidebar-img" src="img/communities.svg">
+                        <div class="sidebar-menu-option-text">Communities</div>
+                    </div>
                 </div>
-                <div>
-                    <h2>Updated Privacy Policy</h2>
-                    <p>Description here</p>
+                <div class="sidebar-menu-two">
+                    <div class="sidebar-menu-option">
+                        <img class="sidebar-img" src="img/settings.svg">
+                        <div class="sidebar-menu-option-text">Settings</div>
+                    </div>
+                    <div class="sidebar-menu-option">
+                        <img class="sidebar-img" src="img/support.svg">
+                        <div class="sidebar-menu-option-text">Support</div>
+                    </div>
+                    <div class="sidebar-menu-option">
+                        <img class="sidebar-img" src="img/privacy.svg">
+                        <div class="sidebar-menu-option-text">Privacy</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="trending">
-            <h1>Trending</h1>
-            <div class="trending-container">
-                <div class="trending-entry">
-                    <img>
-                    <div class="trending-user"></div>
-                    <div class="trending-project"></div>
+            <div class="content-grid-container">
+                <div class="projects">
+                    <div class="projects-title-text">Your Projects</div>
+                    <div class="project-container-one">
+                        <div class="project-container-title">Super Cool Project</div>
+                        <div class="project-container-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. Interdum consectetur libero id faucibus nisl tincidunt eget. Massa sed elementum tempus egestas sed sed risus pretium. Tellus pellentesque eu tincidunt tortor.</div>
+                        <div class="project-container-button-menu">
+                            <img class="project-container-image" src="img/favorite.svg">
+                            <img class="project-container-image" src="img/watch.svg">
+                            <img class="project-container-image" src="img/share.svg">
+                        </div>
+                    </div>
+                    <div class="project-container-two">
+                        <div class="project-container-title">Super Cool Project</div>
+                        <div class="project-container-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. Interdum consectetur libero id faucibus nisl tincidunt eget. Massa sed elementum tempus egestas sed sed risus pretium. Tellus pellentesque eu tincidunt tortor.</div>
+                        <div class="project-container-button-menu">
+                            <img class="project-container-image" src="img/favorite.svg">
+                            <img class="project-container-image" src="img/watch.svg">
+                            <img class="project-container-image" src="img/share.svg">
+                        </div>
+                    </div>
+                    <div class="project-container-three">
+                        <div class="project-container-title">Super Cool Project</div>
+                        <div class="project-container-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. Interdum consectetur libero id faucibus nisl tincidunt eget. Massa sed elementum tempus egestas sed sed risus pretium. Tellus pellentesque eu tincidunt tortor.</div>
+                        <div class="project-container-button-menu">
+                            <img class="project-container-image" src="img/favorite.svg">
+                            <img class="project-container-image" src="img/watch.svg">
+                            <img class="project-container-image" src="img/share.svg">
+                        </div>
+                    </div>
+                    <div class="project-container-four">
+                        <div class="project-container-title">Super Cool Project</div>
+                        <div class="project-container-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. Interdum consectetur libero id faucibus nisl tincidunt eget. Massa sed elementum tempus egestas sed sed risus pretium. Tellus pellentesque eu tincidunt tortor.</div>
+                        <div class="project-container-button-menu">
+                            <img class="project-container-image" src="img/favorite.svg">
+                            <img class="project-container-image" src="img/watch.svg">
+                            <img class="project-container-image" src="img/share.svg">
+                        </div>
+                    </div>
+                    <div class="project-container-five">
+                        <div class="project-container-title">Super Cool Project</div>
+                        <div class="project-container-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. Interdum consectetur libero id faucibus nisl tincidunt eget. Massa sed elementum tempus egestas sed sed risus pretium. Tellus pellentesque eu tincidunt tortor.</div>
+                        <div class="project-container-button-menu">
+                            <img class="project-container-image" src="img/favorite.svg">
+                            <img class="project-container-image" src="img/watch.svg">
+                            <img class="project-container-image" src="img/share.svg">
+                        </div>
+                    </div>
+                    <div class="project-container-six">
+                        <div class="project-container-title">Super Cool Project</div>
+                        <div class="project-container-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat. Interdum consectetur libero id faucibus nisl tincidunt eget. Massa sed elementum tempus egestas sed sed risus pretium. Tellus pellentesque eu tincidunt tortor.</div>
+                        <div class="project-container-button-menu">
+                            <img class="project-container-image" src="img/favorite.svg">
+                            <img class="project-container-image" src="img/watch.svg">
+                            <img class="project-container-image" src="img/share.svg">
+                        </div>
+                    </div>
                 </div>
-                <div class="trending-entry">
-                    <img>
-                    <div class="trending-user"></div>
-                    <div class="trending-project"></div>
+                <div class="announcements">
+                    <div class="announcements-title-text">Announcements</div>
+                    <div class="announcements-content">
+                        <div class="announcements-content-entry">
+                            <div class="announcements-content-title">
+                                Site Maintenance
+                            </div>
+                            <div class="announcements-content-description">
+                                Placeholder description
+                            </div>
+                        </div>
+                        <div class="announcements-content-entry">
+                            <div class="announcements-content-title">
+                                Community Share Day
+                            </div>
+                            <div class="announcements-content-description">
+                                Placeholder description
+                            </div>
+                        </div>
+                        <div class="announcements-content-entry">
+                            <div class="announcements-content-title">
+                                Updated Privacy Policy
+                            </div>
+                            <div class="announcements-content-description">
+                                Placeholder description
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="trending-entry">
-                    <img>
-                    <div class="trending-user"></div>
-                    <div class="trending-project"></div>
-                </div>
-                <div class="trending-entry">
-                    <img>
-                    <div class="trending-user"></div>
-                    <div class="trending-project"></div>
+                <div class="trending">
+                    <div class="trending-title-text">Trending</div>
+                    <div class="trending-content">
+                        <div class="trending-content-entry">
+                            <img class="trending-content-entry-img" src="img/account-hard-hat.svg">
+                            <div class="trending-content-entry-title">
+                                @tegan
+                            </div>
+                            <div class="trending-content-entry-description">
+                                World Peace Builder
+                            </div>
+                        </div>
+                        <div class="trending-content-entry">
+                            <img class="trending-content-entry-img" src="img/account-hard-hat.svg">
+                            <div class="trending-content-entry-title">
+                                @morgan
+                            </div>
+                            <div class="trending-content-entry-description">
+                                Super Cool Project
+                            </div>
+                        </div>
+                        <div class="trending-content-entry">
+                            <img class="trending-content-entry-img" src="img/account-hard-hat.svg">
+                            <div class="trending-content-entry-title">
+                                @kendall
+                            </div>
+                            <div class="trending-content-entry-description">
+                                Life Changing App
+                            </div>
+                        </div>
+                        <div class="trending-content-entry">
+                            <img class="trending-content-entry-img" src="img/account-hard-hat.svg">
+                            <div class="trending-content-entry-title">
+                                @alex
+                            </div>
+                            <div class="trending-content-entry-description">
+                                No Traffic Maker
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </body>
-</html>
+</html> 
