@@ -8,6 +8,48 @@
 }
 .announcements{
     grid-area: announcements;
+    padding: 20px 50px 5px 5px;
+}
+.announcements-content{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px 50px 10px 50px;
+}
+.announcements-content-entry{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.announcements-content-entry:nth-child(2){
+    border-right: 0px;
+    border-left: 0px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+}
+.announcements-content-title{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.announcements-content-entry:nth-child(2) .announcements-content-title{
+    margin-top: 15px;
+}
+.announcements-content-entry:nth-child(2) .announcements-content-desc{
+    margin-bottom: 15px;
+}
+
+.announcements-content-desc{
+    height: 80px;
+    overflow: scroll;
+}
+.announcements,
+.trending{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 body{
     background-color: grey;
@@ -15,7 +57,7 @@ body{
     width: 100vw;
 }
 .body-grid-container{
-    background-color: white;
+    background-color: rgb(221, 221, 221);
     height: 100%;
     width: 100%;
     display: grid;
@@ -30,10 +72,11 @@ body{
     background-color: rgb(221, 221, 221);
     grid-area: content;
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 2fr 0.1fr 1.5fr;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
     "projects announcements"
+    "projects empty"
     "projects trending";
 }
 .header{
@@ -45,18 +88,20 @@ body{
     grid-template-areas: 
     "header-top"
     "header-bottom";
+    box-shadow: 2px 7px 8px -7px rgba(0,0,0,0.75);
+    margin-bottom: 10px;
 }
 .header-bottom{
     grid-area: header-bottom;
     display: grid;
-    
+    padding-bottom: 20px;
 }
 .header-top{
     grid-area: header-top;
     grid-column-gap: 20px;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 4fr 2fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 4fr 3fr 0.3fr 0.7fr 2fr;
     grid-template-areas: "header-top-search-img header-top-search-bar header-top-empty header-top-bell-img header-top-profile-img header-top-profile-name";
 }
 .header-top-search-img{
@@ -66,7 +111,7 @@ body{
 }
 .header-top-search-bar{
     grid-area: header-top-search-bar;
-    height: 40px;
+    height: 30px;
     border-radius: 40px;
     border-style: solid;
     border-color: black;
@@ -84,18 +129,18 @@ body{
     grid-area: header-top-profile-name;
     justify-self: flex-start;
     align-self: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 .header-top-bell-img,
 .header-top-search-img{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 .header-top-profile-img,
 .header-bottom-img{
-    height: 110px;
-    width: 110px;
+    height: 80px;
+    width: 80px;
     border-radius: 100%;
     justify-self: flex-end;
     align-self: center;
@@ -103,9 +148,10 @@ body{
 .header-bottom{
     display: grid;
     grid-row-gap: 10px;
+    padding-right: 50px;
     grid-column-gap: 30px;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 4fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: 0.7fr 4fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas:
     "header-bottom-img header-bottom-greeting-generic header-bottom-button-new header-bottom-button-upload header-bottom-button-share"
     "header-bottom-img header-bottom-greeting-user header-bottom-button-new header-bottom-button-upload header-bottom-button-share";
@@ -138,8 +184,8 @@ body{
 .header-bottom button{
     justify-self: flex-start;
     align-self: center;
-    height: 50px;
-    width: 125px;
+    height: 40px;
+    width: 115px;
     border-radius: 40px;
     border-style: solid;
     border-color: rgb(85, 85, 235);
@@ -148,53 +194,83 @@ body{
     background-color: rgb(85, 85, 235);
     color: white;
 }
+
 .projects{
     grid-area: projects;
     display: grid;
-    grid-template-rows: 0.3fr 1fr 1fr 1fr 0.5fr;
+    padding: 5px 20px 5px 40px;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 0.2fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "projects-title-text projects-title-text"
     "project-container-one project-container-two"
     "project-container-three project-container-four "
     "project-container-five project-container-six";
+    grid-column-gap: 20px;
 }
-.project-container-one{
+.project-container-button-menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+.project-container-content-one{
     background-color: var(--content-container);
     grid-area: project-container-one;
 }
-.project-container-two{
+.project-container-content-two{
     background-color: var(--content-container);
     grid-area: project-container-two;
 }
-.project-container-three{
+.project-container-content-three{
     background-color: var(--content-container);
     grid-area: project-container-three;
 }
-.project-container-four{
+.project-container-content-four{
     background-color: var(--content-container);
     grid-area: project-container-four;
 }
-.project-container-five{
+.project-container-content-five{
     background-color: var(--content-container);
     grid-area: project-container-five;
 }
-.project-container-six{
+.project-container-content-six{
     background-color: var(--content-container);
     grid-area: project-container-six;
 }
-
+[class^="project-container-content"]{
+    border-radius: 5px;
+    display: grid;
+    height: 200px;
+    width: 300px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-left: 7px;
+    border-color:sandybrown;
+    border-style: solid;
+    grid-template-rows: 0.3fr 1fr 0.5fr;
+    padding: 10px 35px 10px 35px;
+   
+}
 .project-container-desc{
-    height: 50%;
-    width: 85%;
+    
     overflow: scroll;
 }
 .project-container-image{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
+}
+.project-container-title{
+    font-size: 17px;
+    font-weight: bold;
 }
 .projects-title-text{
     grid-area: projects-title-text;
+    align-self: center;
+    font-size: 25px;
+    font-weight: 0old;
+    padding-left: 15px;
 }
 .sidebar-grid-container{
     background-color: rgb(85, 85, 235);
@@ -215,30 +291,35 @@ body{
     flex-direction: column;
     gap: 20px;
 }
+
 /*sets gaps for the menu options*/
 .sidebar-menu-option,
 .sidebar-header{
     gap: 30px;
 }
-
+/*sets border radius for content*/
+.announcements-content,
+.trending-content{
+    border-radius: 20px;
+}
 .sidebar-menu-option-text,
 .sidebar-logo-text{
     height: auto;
     width: 100px;
-    font-size: clamp(16px, 30px, 32px);
+    font-size: clamp(16px, 24px, 30px);
     font-weight: bold;
     color: white;
 }
 #sidebar-header-logo-img{
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
 }
 #sidebar-header-logo-text{
-    font-size: clamp(18px, 32px, 34px);
+    font-size: clamp(18px, 26px, 32px);
 }
 .sidebar-img{
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
 }
 
 .sidebar-menu-option{
@@ -251,23 +332,50 @@ body{
 }
 .trending{
     grid-area: trending;
+    padding: 0px 50px 30px 5px;
+    
 }
 .trending-content,
 .announcements-content{
     background-color: var(--content-container);
 }
+.trending-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .trending-content-entry{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 0.3fr 1fr;
+    grid-template-columns: 0.2fr 1fr;
     grid-template-areas: 
     "trending-content-entry-img trending-content-entry-title"
     "trending-content-entry-img trending-content-entry-title";
+    grid-column-gap: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .trending-content-entry-img{
     grid-area: trending-content-entry-img;
     height: 50px;
     width: 50px;
     border-radius: 100%;
+    justify-self: flex-end;
+    align-self: center;
 }
-.trending-content
+.announcements-title-text,
+.trending-title-text{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.trending-content-entry-title{
+    font-weight: bold;
+}
+.trending-content-entry-title,
+.trending-content-entry-desc{
+    justify-self: flex-start;
+    align-self: center;
+}
