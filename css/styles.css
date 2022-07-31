@@ -207,6 +207,7 @@ body{
     "project-container-three project-container-four "
     "project-container-five project-container-six";
     grid-column-gap: 20px;
+    overflow: auto;
 }
 .project-container-button-menu{
     display: flex;
@@ -214,35 +215,13 @@ body{
     align-items: center;
     gap: 8px;
 }
-.project-container-content-one{
-    background-color: var(--content-container);
-    grid-area: project-container-one;
-}
-.project-container-content-two{
-    background-color: var(--content-container);
-    grid-area: project-container-two;
-}
-.project-container-content-three{
-    background-color: var(--content-container);
-    grid-area: project-container-three;
-}
-.project-container-content-four{
-    background-color: var(--content-container);
-    grid-area: project-container-four;
-}
-.project-container-content-five{
-    background-color: var(--content-container);
-    grid-area: project-container-five;
-}
-.project-container-content-six{
-    background-color: var(--content-container);
-    grid-area: project-container-six;
-}
+
 [class^="project-container-content"]{
+    background-color: var(--content-container);
     border-radius: 5px;
     display: grid;
-    height: 200px;
-    width: 300px;
+    height: 80%;
+    width: 80%;
     border-top: 0px;
     border-right: 0px;
     border-bottom: 0px;
@@ -254,8 +233,7 @@ body{
    
 }
 .project-container-desc{
-    
-    overflow: scroll;
+    overflow:scroll;
 }
 .project-container-image{
     height: 30px;
@@ -271,6 +249,7 @@ body{
     font-size: 25px;
     font-weight: 0old;
     padding-left: 15px;
+    padding-bottom: 10px;
 }
 .sidebar-grid-container{
     background-color: rgb(85, 85, 235);
