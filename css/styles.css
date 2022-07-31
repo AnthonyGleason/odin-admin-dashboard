@@ -53,6 +53,7 @@ body{
 }
 .header-top{
     grid-area: header-top;
+    grid-column-gap: 20px;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 4fr 2fr 1fr 1fr 2fr;
@@ -60,28 +61,51 @@ body{
 }
 .header-top-search-img{
     grid-area: header-top-search-img;
+    justify-self: flex-end;
+    align-self: center;
 }
 .header-top-search-bar{
     grid-area: header-top-search-bar;
+    height: 40px;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: black;
+    align-self: center;
 }   
 .header-top-bell-img{
     grid-area: header-top-bell-img;
+    justify-self: flex-end;
+    align-self: center;
 }
 .header-top-profile-img{
     grid-area: header-top-profile-img;
 }
 .header-top-profile-name{
     grid-area: header-top-profile-name;
+    justify-self: flex-start;
+    align-self: center;
+    font-size: 30px;
+    font-weight: bold;
 }
-.header-top img,
-.header-bottom img{
+.header-top-bell-img,
+.header-top-search-img{
     height: 50px;
     width: 50px;
 }
+.header-top-profile-img,
+.header-bottom-img{
+    height: 110px;
+    width: 110px;
+    border-radius: 100%;
+    justify-self: flex-end;
+    align-self: center;
+}
 .header-bottom{
     display: grid;
+    grid-row-gap: 10px;
+    grid-column-gap: 30px;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas:
     "header-bottom-img header-bottom-greeting-generic header-bottom-button-new header-bottom-button-upload header-bottom-button-share"
     "header-bottom-img header-bottom-greeting-user header-bottom-button-new header-bottom-button-upload header-bottom-button-share";
@@ -91,10 +115,17 @@ body{
 }
 .header-bottom-greeting-generic{
     grid-area: header-bottom-greeting-generic;
+    align-self: flex-end;
 }
 .header-bottom-greeting-user{
     grid-area: header-bottom-greeting-user;
 }
+.header-bottom-greeting-generic,
+.header-bottom-greeting-user{
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .header-bottom-button-new{
     grid-area: header-bottom-button-new;
 }
@@ -103,6 +134,19 @@ body{
 }
 .header-bottom-button-upload{
     grid-area: header-bottom-button-upload;
+}
+.header-bottom button{
+    justify-self: flex-start;
+    align-self: center;
+    height: 50px;
+    width: 125px;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: rgb(85, 85, 235);
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: rgb(85, 85, 235);
+    color: white;
 }
 .projects{
     grid-area: projects;
@@ -224,4 +268,6 @@ body{
     grid-area: trending-content-entry-img;
     height: 50px;
     width: 50px;
+    border-radius: 100%;
 }
+.trending-content
